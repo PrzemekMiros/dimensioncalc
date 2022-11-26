@@ -26,7 +26,22 @@
                         </label>
                     </div>
 
+
+                    <div>
+  <button onclick="dec('qty')">-</button>
+  <input name="qty" type="number" readonly value="0">
+  <button onclick="inc('qty')">+</button>  
+</div>
+
+<div>
+  <button onclick="dec('amount')">-</button>
+  <input name="amount" type="number" readonly value="0">
+  <button onclick="inc('amount')">+</button>  
+</div>
+
+
                 </form>
+                
 
                 <div class="sum-wrap">
                     <span>Wymiar listwy wynosi:</span>
@@ -38,17 +53,46 @@
 </body>
 
 <script>
+
+function inc(element) {
+  let el = document.querySelector(`[name="${element}"]`);
+  el.value = parseInt(el.value) + 1;
+}
+
+function dec(element) {
+  let el = document.querySelector(`[name="${element}"]`);
+	if (parseInt(el.value) > 0) {
+	  el.value = parseInt(el.value) - 1;
+  }
+}
+
+
+
     var numOne = document.getElementById("num-one");
     var addSum = document.getElementById("add-sum");
 
     numOne.addEventListener("input", add);
 
     function add() {
-        var one = Number(numOne.value) || 0;
+        var one = Number(numOne.value);
         var count = 3.5;
         var sum = Number(one - count);
         addSum.innerHTML = sum;
     }
+
+let btnPlus = document.querySelector("#plus");
+let btnMinus = document.querySelector("#minus");
+let input = document.querySelector("#num-two");
+
+btnPlus.addEventListener('click', () =>{
+    input.value = parseInt(input.value) + 1;
+});
+
+btnMinus.addEventListener('click', () =>{
+    input.value = parseInt(input.value) - 1;
+});
+
+
 </script>
 
 

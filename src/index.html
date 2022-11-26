@@ -13,29 +13,45 @@
 <body>
     <main>
         <div class="container pt-large">
-            <header>
+            <div class="calculator-wrap">
+                <header>
                 <h1>Kalkulator wymiarów listew</h1>
             </header>
-            <h4>Wprowadź wymiar</h4>
-            <p>
-                <input id="num-one">
-            </p>
-            <span>Wymiar listwy wynosi:</span>
-            <span id="add-sum"></span>
+            <div class="grid-md-2">
+                <div>
+                    <h4>Wprowadź wymiar nr 1</h4>
+                    <p>
+                        <input id="num-one" type="number">
+                    </p>
+                </div>
+                <div>
+                    <h4>Wprowadź wymiar nr 2</h4>
+                    <p>
+                        <input id="num-two" type="number">
+                    </p>
+                </div>
+            </div>
+            <div class="sum-wrap">
+                <span>Wymiar listwy wynosi:</span>
+                <span id="add-sum" class="bold"></span>
+            </div>
+            </div>
         </div>
     </main>
 </body>
 
 <script>
     var numOne = document.getElementById("num-one");
+    var numTwo = document.getElementById("num-two");
     var addSum = document.getElementById("add-sum");
 
     numOne.addEventListener("input", add);
 
     function add() {
         var one = Number(numOne.value) || 0;
-        var two = 3.5;
-        var sum = Number(one - two);
+        var two = Number(numTwo.value) || 0;
+        var count = 3.5;
+        var sum = Number(one - count);
         addSum.innerHTML = sum;
     }
 </script>

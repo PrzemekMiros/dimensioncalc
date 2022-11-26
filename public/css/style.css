@@ -12,20 +12,17 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
-    color: #eee;
-}
-
-
-main {
     height: 100vh;
     background-image: url('/img/img.jpg');
     background-size: cover;
     background-color: rgba(2, 44, 63, 0.514);
     background-blend-mode: multiply;
     background-attachment: fixed;
-    background-position: top
-  }
+    background-position: top;
+    font-family: sans-serif;
+    color: #eee
+}
+
 
   main::before {
     position: absolute;

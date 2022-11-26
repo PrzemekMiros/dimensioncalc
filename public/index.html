@@ -25,12 +25,6 @@
                             <input id="num-one" type="number">
                         </label>
                     </div>
-                    <div class="form-field">
-                        <label for="num-two">
-                            <h4>Wprowadź wymiar nr 2</h4>
-                            <input id="num-two" type="number">
-                        </label>
-                    </div>
 
                 </form>
 
@@ -45,14 +39,12 @@
 
 <script>
     var numOne = document.getElementById("num-one");
-    var numTwo = document.getElementById("num-two");
     var addSum = document.getElementById("add-sum");
 
     numOne.addEventListener("input", add);
 
     function add() {
         var one = Number(numOne.value) || 0;
-        var two = Number(numTwo.value) || 0;
         var count = 3.5;
         var sum = Number(one - count);
         addSum.innerHTML = sum;

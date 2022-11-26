@@ -23,6 +23,7 @@ main {
     background-size: cover;
     background-color: rgba(2, 44, 63, 0.514);
     background-blend-mode: multiply;
+    background-attachment: fixed;
     background-position: top
   }
 

@@ -1,0 +1,43 @@
+:root {
+    --color-accent: rgb(0, 255, 149);
+    --color-heading: #111;
+    --color-text: #333;
+    --color-border: #777;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    color: #111;
+}
+
+.container {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pt-large {
+    padding-top: 120px
+}
+
+p,
+span {
+    color: var(--color-text);
+}
+
+
+input {
+    padding: 1em;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: none;
+    outline: 2px solid var(--color-border);
+}
+
+input:active,
+input:focus {
+    outline: 2px solid var(--color-accent);
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oblicz wymiar</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <main>
+        <div class="container pt-large">
+            <header>
+                <h1>Kalkulator wymiarów listew</h1>
+            </header>
+            <h4>Wprowadź wymiar</h4>
+            <p>
+                <input id="num-one">
+            </p>
+            <span>Wymiar listwy wynosi:</span>
+            <span id="add-sum"></span>
+        </div>
+    </main>
+</body>
+
+<script>
+    var numOne = document.getElementById("num-one");
+    var addSum = document.getElementById("add-sum");
+
+    numOne.addEventListener("input", add);
+
+    function add() {
+        var one = Number(numOne.value) || 0;
+        var two = 3.5;
+        var sum = Number(one - two);
+        addSum.innerHTML = sum;
+    }
+</script>
+
+</html>

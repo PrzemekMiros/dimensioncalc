@@ -63,6 +63,12 @@ main {
     padding-top:80px
 }
 
+@media(min-width:767px) {
+    .pt-md-large {
+        padding-top: 120px
+    }
+}
+
 
 /* Typography
 ------------------------------*/
@@ -81,28 +87,12 @@ span {
 
   .calculator-wrap {
     margin: 0 auto;
-    padding: 5em;
-    width: 56%;
+    padding: 2.5em;
     background: inherit;
     position: relative;
     overflow: hidden;
     border-radius: 8px;
     z-index: 1;
-  }
-
-  .calculator-wrap::before{
-    width: 100%;
-    height: 100%;
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: inherit;
-    box-shadow: inset 0 0 0 800px rgba(255,255,255,0.2);
-    filter: blur(10px);
-    z-index: -1
   }
 
   input{
@@ -113,7 +103,7 @@ span {
     border-bottom: 2px solid rgba(255,255,255, 0.3);
     margin: 20px 0;
     padding-bottom: 10px;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: bold;
     color: rgba(255,255,255, 0.8);
   }
@@ -142,3 +132,26 @@ span {
     outline: 1px solid var(--color-border);
     font-size: 22px
 }
+
+@media(min-width:767px) {
+    .calculator-wrap {
+        padding: 5em;
+        width: 56%
+      }
+      .calculator-wrap::before{
+        width: 100%;
+        height: 100%;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: inherit;
+        box-shadow: inset 0 0 0 800px rgba(255,255,255,0.2);
+        filter: blur(10px);
+        z-index: -1
+      }
+}
+
+

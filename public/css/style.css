@@ -149,7 +149,7 @@ span {
     border: 0;
     border-bottom: 2px solid rgba(255,255,255, 0.3);
     margin: 20px 0;
-    padding: 10px 20px;
+    padding: 5px 20px;
     font-size: 28px;
     font-weight: bold;
     color: rgba(255,255,255, 0.8);
@@ -159,6 +159,8 @@ span {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 56px;
+    height: 46px;
     background-color: var(--color-accent);
     border: none;
     font-size: 23px;

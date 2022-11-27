@@ -149,12 +149,23 @@ span {
     border: 0;
     border-bottom: 2px solid rgba(255,255,255, 0.3);
     margin: 20px 0;
-    padding-bottom: 10px;
+    padding: 10px 20px;
     font-size: 28px;
     font-weight: bold;
     color: rgba(255,255,255, 0.8);
   }
 
+  .qty-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-accent);
+    border: none;
+    font-size: 23px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer
+  }
 
   .sum-wrap {
     padding: 2em 1.3em;
@@ -193,17 +204,19 @@ span {
 
 
 
-/* Chrome, Safari, Edge, Opera */
+/* Chrome, Safari, Edge, Opera
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+ */
 
-/* Firefox */
+/* Firefox 
 input[type=number] {
   -moz-appearance: textfield;
 }
+*/
 
 
 /* Modal

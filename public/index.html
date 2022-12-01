@@ -54,11 +54,11 @@
               </label>
 
           <div id="buttons">
-              <button class="button" id="button" data-modal="modal-one">
-                Wymiary (-3.6)
-              </button>
-              <button class="button" id="button" data-modal="modal-two">
+              <button class="button" data-modal="modal-one">
                 Wymiary (-0.6)
+              </button>
+              <button class="button" data-modal="modal-two">
+                Wymiary (-3.6)
               </button>
           </div>
 
@@ -70,7 +70,7 @@
 
         <div class="container">
           <div class="modal-container pt-large">
-            <h1>Wymiary listwy (-3.6)</h1>
+            <h1>Wymiary listwy (-0.6)</h1>
                 <div id="displayArea">
                   <div class="form-field">
                     <span>Wymiar 1</span>
@@ -110,7 +110,7 @@
 
         <div class="container">
           <div class="modal-container pt-large">
-            <h1>Wymiary listwy (-0.6)</h1>
+            <h1>Wymiary listwy (-3.6)</h1>
                 <div id="displayArea">
                   <div class="form-field">
                     <span>Wymiar 1</span>
@@ -181,7 +181,7 @@
   </script>
 
   <script>
-    var calc = document.getElementById("button");
+    var calc = document.querySelector(".button");
 
     calc.addEventListener("click", calculate);
 

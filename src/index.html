@@ -14,31 +14,53 @@
       <div class="container">
         <div class="calculator-wrap">
           <header>
-            <h1>Kalkulator wymiarów listew</h1>
-          </header>
-
-
-
-
-            <div id="input1" class="form-field">
-              <button class="qty-btn" onclick="dec('qty')">-</button>
-              <input name="qty"  type="number" id="type1" class="input" value="1"/>
-              <button class="qty-btn" onclick="inc('qty')">+</button>
-            </div>
-
-            <div id="input2" class="form-field">
-                <button class="qty-btn" onclick="dec('amount')">-</button>
-                <input name="amount" type="number" id="type2" class="input" value="1"/>
-                <button class="qty-btn" onclick="inc('amount')">+</button>
-            </div>
+            <h1>Kalkulator wymiarów</h1>
+          </header>             
+              <label for="type1" id="input1" class="form-field">
+                <span> Wymiar 1</span>
+                <button class="qty-btn" onclick="dec('qty1')">-</button>
+                  <input name="qty1" type="number" id="type1" class="input" value="1"/>
+                <button class="qty-btn" onclick="inc('qty1')">+</button>
+              </label>
+              <label for="type1" id="input2" class="form-field">
+                <span>Wymiar 2</span>
+                <button class="qty-btn" onclick="dec('qty2')">-</button>
+                  <input name="qty2" type="number" id="type2" class="input" value="1"/>
+                <button class="qty-btn" onclick="inc('qty2')">+</button>
+              </label>
+              <label for="type1" id="input2" class="form-field">
+                <span>Wymiar 3</span>
+                <button class="qty-btn" onclick="dec('qty3')">-</button>
+                  <input name="qty3" type="number" id="type3" class="input" value="1"/>
+                <button class="qty-btn" onclick="inc('qty3')">+</button>
+              </label>
+              <label for="type1" id="input2" class="form-field">
+                <span>Wymiar 4</span>
+                <button class="qty-btn" onclick="dec('qty4')">-</button>
+                  <input name="qty4" type="number" id="type4" class="input" value="1"/>
+                <button class="qty-btn" onclick="inc('qty4')">+</button>
+              </label>
+              <label for="type1" id="input2" class="form-field">
+                <span>Wymiar 5</span>
+                <button class="qty-btn" onclick="dec('qty5')">-</button>
+                  <input name="qty5" type="number" id="type5" class="input" value="1"/>
+                <button class="qty-btn" onclick="inc('qty5')">+</button>
+              </label>
+              <label for="type1" id="input2" class="form-field">
+                <span>Wymiar 6</span>
+                <button class="qty-btn" onclick="dec('qty6')">-</button>
+                  <input name="qty6" type="number" id="type6" class="input" value="1"/>
+                <button class="qty-btn" onclick="inc('qty6')">+</button>
+              </label>
 
           <div id="buttons">
               <button class="button" id="button" data-modal="modal-one">
-                Pokaż wymiary listwy
+                Wymiary (-3.6)
+              </button>
+              <button class="button" id="button" data-modal="modal-two">
+                Wymiary (-0.6)
               </button>
           </div>
-
-
 
         </div>
       </div>
@@ -48,9 +70,73 @@
 
         <div class="container">
           <div class="modal-container pt-large">
-            <h1>Wymiary listwy</h1>
+            <h1>Wymiary listwy (-3.6)</h1>
                 <div id="displayArea">
-                    <h1 id="display"></h1>
+                  <div class="form-field">
+                    <span>Wymiar 1</span>
+                    <span id="display21"></span>
+                  </div>
+                  <div class="form-field">
+                    <span>Wymiar 2</span>
+                    <span id="display22"></span>
+                  </div>
+                  <div class="form-field">
+                    <span>Wymiar 3</span>
+                    <span id="display23"></span>
+                  </div>
+                  <div class="form-field">
+                    <span>Wymiar 4</span>
+                    <span id="display24"></span>
+                  </div>
+                  <div class="form-field">
+                    <span>Wymiar 5</span>
+                    <span id="display25"></span>
+                  </div>
+                  <div class="form-field">
+                    <span>Wymiar 6</span>
+                    <span id="display26"></span>
+                  </div>
+
+                </div>
+            <button class="button modal-close modal-exit">
+              Wróć do kalkulatora
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal" id="modal-two">
+        <div class="modal-bg modal-exit"></div>
+
+        <div class="container">
+          <div class="modal-container pt-large">
+            <h1>Wymiary listwy (-0.6)</h1>
+                <div id="displayArea">
+                  <div class="form-field">
+                    <span>Wymiar 1</span>
+                    <span id="display1"></span>
+                  </div>
+                  <div class="form-field">
+                    <span>Wymiar 2</span>
+                    <span id="display2"></span>
+                  </div>
+                  <div class="form-field">
+                    <span>Wymiar 3</span>
+                    <span id="display3"></span>
+                  </div>
+                  <div class="form-field">
+                    <span>Wymiar 4</span>
+                    <span id="display4"></span>
+                  </div>
+                  <div class="form-field">
+                    <span>Wymiar 5</span>
+                    <span id="display5"></span>
+                  </div>
+                  <div class="form-field">
+                    <span>Wymiar 6</span>
+                    <span id="display6"></span>
+                  </div>
+
                 </div>
             <button class="button modal-close modal-exit">
               Wróć do kalkulatora
@@ -60,22 +146,6 @@
       </div>
     </main>
   </body>
-
-  <script>
-    var numOne = document.getElementById("num-one");
-    var numTwo = document.getElementById("num-two");
-    var addSum = document.getElementById("add-sum");
-
-    numOne.addEventListener("input", add);
-
-    function add() {
-      var one = Number(numOne.value) || 0;
-      var two = Number(numTwo.value) || 0;
-      var count = 3.5;
-      var sum = Number(one - count);
-      addSum.innerHTML = sum;
-    }
-  </script>
 
   <script>
     const modals = document.querySelectorAll("[data-modal]");
@@ -118,9 +188,66 @@
     function calculate() {
       let type1 = document.getElementById("type1").value;
       let type2 = document.getElementById("type2").value;
-      let result = parseInt(type1) + parseInt(type2);
-      let display = document.getElementById("display");
-      display.innerText = result;
+      let type3 = document.getElementById("type3").value;
+      let type4 = document.getElementById("type4").value;
+      let type5 = document.getElementById("type5").value;
+      let type6 = document.getElementById("type6").value;
+
+      const num1 = '3.6';
+      const num2 = '0.6';
+
+      let result1 = type1 - num1;
+      let result2 = type2 - num1;
+      let result3 = type3 - num1;
+      let result4 = type4 - num1;
+      let result5 = type5 - num1;
+      let result6 = type6 - num1;
+
+      let display1 = document.getElementById("display1");
+      display1.innerText = result1;
+
+      let display2 = document.getElementById("display2");
+      display2.innerText = result2;
+
+      let display3 = document.getElementById("display3");
+      display3.innerText = result3;
+
+      let display4 = document.getElementById("display4");
+      display4.innerText = result4;
+
+      let display5 = document.getElementById("display5");
+      display5.innerText = result5;
+
+      let display6 = document.getElementById("display6");
+      display6.innerText = result6;
+
+
+      let result21 = type1 - num2;
+      let result22 = type2 - num2;
+      let result23 = type3 - num2;
+      let result24 = type4 - num2;
+      let result25 = type5 - num2;
+      let result26 = type6 - num2;
+
+      let display21 = document.getElementById("display21");
+      display21.innerText = result21;
+
+      let display22 = document.getElementById("display22");
+      display22.innerText = result22;
+
+      let display23 = document.getElementById("display23");
+      display23.innerText = result23;
+
+      let display24 = document.getElementById("display24");
+      display24.innerText = result4;
+
+      let display25 = document.getElementById("display25");
+      display25.innerText = result5;
+
+      let display26 = document.getElementById("display26");
+      display26.innerText = result26;
+
     }
+
   </script>
 </html>

@@ -40,14 +40,21 @@ main {
 
   }
 
+  #buttons {
+    display: flex;
+    gap: 15px
+  }
+
   .button {
-    display: inline-block;
-    padding: 1em 1.4em;
-    background-color: var(--color-accent);
-    border: none;
-    color: #fff;
-    font-weight: 600;
-    cursor: pointer
+      display: inline-block;
+      padding: 1em 1.4em;
+      background-color: var(--color-accent);
+      border: none;
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 20px;
+      width: 100%;
   }
 
   @media(min-width:767px) {
@@ -142,17 +149,23 @@ span {
     width: 100%
   }
 
+  .form-field span {
+    width: 50%;
+    font-size: 21px;
+    font-weight: 600;
+  }
+
   input{
     background: 0;
-    width: 100%;
+    width: 40%;
     outline: 0;
     border: 0;
-    border-bottom: 2px solid rgba(255,255,255, 0.3);
-    margin: 20px 0;
-    padding: 5px 20px;
-    font-size: 28px;
+    border: 2px solid rgb(44, 64, 77);
+    margin: 10px 0;
+    padding: 7px 20px;
+    font-size: 23px;
     font-weight: bold;
-    color: rgba(255,255,255, 0.8);
+    color: rgba(255,255,255, 0.8)
   }
 
   .qty-btn {
@@ -161,7 +174,7 @@ span {
     justify-content: center;
     width: 56px;
     height: 46px;
-    background-color: var(--color-accent);
+    background-color: rgb(44, 64, 77);
     border: none;
     font-size: 23px;
     font-weight: 600;
@@ -260,7 +273,11 @@ input[type=number] {
   background-color: #0000006b;
   background-blend-mode: multiply;
   z-index: 99;
-
+}
+.modal .form-field {
+  margin: 5px 0 10px;
+  border-bottom: 1px solid #fff1;
+  padding: 17px 0 13px;
 }
 .modal-close {
   outline: none;
